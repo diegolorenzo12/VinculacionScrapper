@@ -78,7 +78,7 @@ export const GetStudentInfo = async (username:string, password:string) => {
             const firstElementText = await page.evaluate(element => element.textContent, NameElementHandle);
             if(firstElementText && firstElementText !== null){
                 const ExtractedFullName = firstElementText;
-                console.log('ExtractedFullName:', ExtractedFullName);
+                //console.log('ExtractedFullName:', ExtractedFullName);
                 const ArrayFullName = ExtractedFullName.split(',');
                 LastNameP = capitalizeFirstLetter(ArrayFullName[0].split(' ')[0].trim());
                 LastNameM = capitalizeFirstLetter(ArrayFullName[0].split(' ')[1].trim());
